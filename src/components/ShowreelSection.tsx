@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 
 const ShowreelSection = () => {
+  const showreelSrc = "/showreel-byvaltseva-anastasiya.mp4";
+
   return (
     <section id="showreel" className="py-24 md:py-32 section-gradient">
       <div className="container px-6">
@@ -27,22 +29,15 @@ const ShowreelSection = () => {
         >
           <div className="glass-card p-2 md:p-3 rounded-2xl glow-accent">
             <div className="relative w-full rounded-xl overflow-hidden bg-secondary" style={{ paddingBottom: "56.25%" }}>
-              {/* Replace src with actual showreel video URL */}
               <video
                 className="absolute inset-0 w-full h-full object-cover"
                 controls
-                poster=""
                 preload="metadata"
+                playsInline
               >
-                {/* <source src="showreel.mp4" type="video/mp4" /> */}
+                <source src={showreelSrc} type="video/mp4" />
+                Ваш браузер не поддерживает встроенное видео.
               </video>
-              {/* Placeholder overlay — remove when video is added */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
-                <div className="w-20 h-20 rounded-full border-2 border-accent/60 flex items-center justify-center bg-accent/10 backdrop-blur-sm">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="hsl(var(--accent))"><polygon points="5 3 19 12 5 21 5 3" /></svg>
-                </div>
-                <p className="text-muted-foreground text-sm">Видео шоурил будет здесь</p>
-              </div>
             </div>
           </div>
         </motion.div>
